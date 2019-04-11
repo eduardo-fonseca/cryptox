@@ -40,36 +40,47 @@
         <table id="fresh-table" class="table">
             <thead>
                 <th data-field="exchange">Exchange</th>
-                <th data-field="last_price">Last Price</th>
+                <th data-field="last_price">Último Preço</th>
+                <th data-field="ask">Preço Compra</th>
+                <th data-field="bid">Preço Venda</th>
             </thead>
             <tbody id="cpxTbody">
                 <tr>
-                    <td>MercadoBitcoin</td>
-                    <td>R$ <?php echo cpxMercadoBitcoin()[0]; ?></td>
+                    <td>BitStamp</td>
+                    <td>$ <?php echo cpxBitStamp()[1]; ?></td>
+                    <td>$ <?php echo cpxBitStamp()[7]; ?></td>
+                    <td>$ <?php echo cpxBitStamp()[3]; ?></td>
                 </tr>
                 <tr>
-                    <td>BTCBolsa</td>
-                    <td>R$ <?php echo cpxBTCBolsa()[0]; ?></td>
-                </tr>
                 <tr>
                     <td>Gemini</td>
                     <td>$ <?php echo cpxGemini()[2]; ?></td>
+                    <td>$ <?php echo cpxGemini()[0]; ?></td>
+                    <td>$ <?php echo cpxGemini()[1]; ?></td>
                 </tr>
                 <tr>
                     <td>Cex.IO</td>
                     <td>$ <?php echo cpxCexIO()[3]; ?></td>
+                    <td>$ <?php echo cpxCexIO()[7]; ?></td>
+                    <td>$ <?php echo cpxCexIO()[6]; ?></td>
                 </tr>
                 <tr>
                     <td>HitBTC</td>
                     <td>$ <?php echo cpxHitBTC()[2]; ?></td>
+                    <td>$ <?php echo cpxHitBTC()[0]; ?></td>
+                    <td>$ <?php echo cpxHitBTC()[1]; ?></td>
                 </tr>
                 <tr>
                     <td>Poloniex</td>
                     <td>$ <?php echo cpxPoloniex()[0]; ?></td>
+                    <td>$ <?php echo cpxPoloniex()[1]; ?></td>
+                    <td>$ <?php echo cpxPoloniex()[2]; ?></td>
                 </tr>
                 <tr>
                     <td>Bitfinex</td>
                     <td>$ <?php echo cpxBitfinex()[3]; ?></td>
+                    <td>$ <?php echo cpxBitfinex()[5]; ?></td>
+                    <td>$ <?php echo cpxBitfinex()[0]; ?></td>
                 </tr>
             </tbody>
         </table>

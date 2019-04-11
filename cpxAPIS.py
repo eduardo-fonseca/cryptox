@@ -45,10 +45,10 @@ def api_bitvalor(exchange, arg1):
 
 	return {
 		'MBT' : json_bitvalor['ticker_1h']['exchanges']['MBT'][arg1],
-		'WAL' : json_bitvalor['ticker_1h']['exchanges']['WAL'][arg1],
 		'CAM' : json_bitvalor['ticker_1h']['exchanges']['CAM'][arg1],
 		'BZX' : json_bitvalor['ticker_1h']['exchanges']['BZX'][arg1],
-		'BTD' : json_bitvalor['ticker_1h']['exchanges']['BTD'][arg1]
+		'BTD' : json_bitvalor['ticker_1h']['exchanges']['BTD'][arg1],
+		'B2U' : json_bitvalor['ticker_1h']['exchanges']['B2U'][arg1]
 
 	}[exchange]
 
@@ -61,7 +61,7 @@ def api_bitvalorAll(exchange):
 
 	Options
 	-------
-	exchange (MBT, WAL, CAM, BZX, BTD)
+	exchange (MBT, CAM, BZX, BTD)
 
 	"""
 	json_bitvalor = cpxFunctions.get_jsonparsed_data('https://api.bitvalor.com/v1/ticker.json')
