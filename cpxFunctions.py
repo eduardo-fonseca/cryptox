@@ -25,5 +25,3 @@ def get_jsonparsed_data(url):
 	response = urllib2.urlopen(request, context=ssl._create_unverified_context())
 	data = response.read().decode("utf-8")
 	return json.loads(data)
-
-

@@ -1,35 +1,5 @@
 <?php
 
-	function cpxMercadoBitcoin() {
-		$db_con = new PDO('mysql:host=localhost;dbname=CryptoX', 'root', '123');
-
-		$statement = $db_con->prepare("select * from mercadobitcoin order by id desc limit 1");
-		if($statement->execute()) {
-			$mercadobitcoin = $statement->fetch();
-			return $mercadobitcoin;
-		}
-	}
-
-	function cpxWalltime() {
-		$db_con = new PDO('mysql:host=localhost;dbname=CryptoX', 'root', '123');
-
-		$statement = $db_con->prepare("select * from walltime order by id desc limit 1");
-		if($statement->execute()) {
-			$walltime = $statement->fetch();
-			return $walltime;
-		}
-	}
-
-	function cpxBitCambio() {
-		$db_con = new PDO('mysql:host=localhost;dbname=CryptoX', 'root', '123');
-
-		$statement = $db_con->prepare("select * from bitcambio order by id desc limit 1");
-		if($statement->execute()) {
-			$bitcambio = $statement->fetch();
-			return $bitcambio;
-		}
-	}
-
 	function cpxBitStamp() {
 		$db_con = new PDO('mysql:host=localhost;dbname=CryptoX', 'root', '123');
 
@@ -80,15 +50,6 @@
 		}
 	}
 
-	function cpxBTCBolsa() {
-		$db_con = new PDO('mysql:host=localhost;dbname=CryptoX', 'root', '123');
-
-		$statement = $db_con->prepare("select * from btcbolsa order by id desc limit 1");
-		if($statement->execute()) {
-			$btcbolsa = $statement->fetch();
-			return $btcbolsa;
-		}
-	}
 
 	function cpxPoloniex() {
 		$db_con = new PDO('mysql:host=localhost;dbname=CryptoX', 'root', '123');

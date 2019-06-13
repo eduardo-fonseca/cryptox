@@ -4,15 +4,6 @@ import cpxFunctions
 Exchanges Adicionadas
 ---------------------
 
-	Nacionais
-	---------
-	- MercadoBitcoin (https://www.mercadobitcoin.com.br/)
-	- WallTime (https://walltime.info/)
-	- BitCambio (https://bitcambio.com.br/)
-	- Braziliex (https://braziliex.com/)
-	- BitcoinTrade (https://bitcointrade.com.br/)
-	- BTCBolsa (https://btcbolsa.com/)
-
 	Internacionais
 	--------------
 	- BitFinex (https://www.bitfinex.com/)
@@ -24,49 +15,6 @@ Exchanges Adicionadas
 	- Poloniex (https://poloniex.com/)
 
 '''
-
-
-def api_bitvalor(exchange, arg1):
-	"""
-	Receive the content of BitValor API, parse it as JSON and return the value of selected argument.
-
-	Parameters
-	----------
-	exchange : str
-	arg1 : str
-
-	Options
-	-------
-	exchange (MBT, WAL, CAM, BZX, BTD)
-	arg1 (last, open, high, low, vol, vwap, money, trades)
-
-	"""
-	json_bitvalor = cpxFunctions.get_jsonparsed_data('https://api.bitvalor.com/v1/ticker.json')
-
-	return {
-		'MBT' : json_bitvalor['ticker_1h']['exchanges']['MBT'][arg1],
-		'CAM' : json_bitvalor['ticker_1h']['exchanges']['CAM'][arg1],
-		'BZX' : json_bitvalor['ticker_1h']['exchanges']['BZX'][arg1],
-		'BTD' : json_bitvalor['ticker_1h']['exchanges']['BTD'][arg1],
-		'B2U' : json_bitvalor['ticker_1h']['exchanges']['B2U'][arg1]
-
-	}[exchange]
-
-
-def api_bitvalorAll(exchange):
-	"""
-	Parameters
-	----------
-	exchange : str
-
-	Options
-	-------
-	exchange (MBT, CAM, BZX, BTD)
-
-	"""
-	json_bitvalor = cpxFunctions.get_jsonparsed_data('https://api.bitvalor.com/v1/ticker.json')
-
-	return json_bitvalor['ticker_1h']['exchanges'][exchange]
 
 
 def api_bitfinex(arg1):
@@ -296,44 +244,6 @@ def api_hitbtcAll():
 	json_hitbtc = cpxFunctions.get_jsonparsed_data('https://api.hitbtc.com/api/2/public/ticker/btcusd')
 
 	return json_hitbtc
-
-
-def api_btcbolsa(arg1):
-	"""
-	Receive the content of BTCBolsa API, parse it as JSON and return the value of selected argument.
-
-	Parameters
-	----------
-	arg1 : str
-
-	Options
-	-------
-	arg1 (last, buy, sell, low, high, volume, trades, timestamp)
-
-	"""
-	json_btcbolsa = cpxFunctions.get_jsonparsed_data('https://api.btcbolsa.com/v1/ticker/BTC')
-
-	return {
-		'last' :  json_btcbolsa['result'][arg1],
-		'buy' : json_btcbolsa['result'][arg1],
-		'sell' : json_btcbolsa['result'][arg1],
-		'low' : json_btcbolsa['result'][arg1],
-		'high' : json_btcbolsa['result'][arg1],
-		'volume' : json_btcbolsa['result'][arg1],
-		'trades' : json_btcbolsa['result'][arg1],
-		'timestamp' : json_btcbolsa['result'][arg1]
-
-	}[arg1]
-
-
-def api_btcbolsaAll():
-	"""
-	Receive the content of BTCBolsa API.
-
-	"""
-	json_btcbolsa = cpxFunctions.get_jsonparsed_data('https://api.btcbolsa.com/v1/ticker/BTC')
-
-	return json_btcbolsa
 
 
 def api_poloniex(arg1):

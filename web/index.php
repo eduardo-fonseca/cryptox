@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" href="assets/img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     
-    <title>CryptoX DEMO</title>
+    <title>CryptoX</title>
 
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     
@@ -23,9 +23,11 @@
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-        
+	
+	
 </head>
 <body>
+
 
 <div class="wrapper">
     <div class="fresh-table full-color-azure full-screen-table">
@@ -36,6 +38,7 @@
         <div class="toolbar">
             <button id="alertBtn" class="btn btn-default">CRYPTOX</button>
         </div>
+		
         
         <table id="fresh-table" class="table">
             <thead>
@@ -48,42 +51,43 @@
                 <tr>
                     <td>BitStamp</td>
                     <td>$ <?php echo cpxBitStamp()[1]; ?></td>
-                    <td>$ <?php echo cpxBitStamp()[7]; ?></td>
-                    <td>$ <?php echo cpxBitStamp()[3]; ?></td>
+                    <td>$ <?php echo cpxBitStamp()[8]; ?></td>
+                    <td>$ <?php echo cpxBitStamp()[4]; ?></td>
                 </tr>
                 <tr>
                 <tr>
                     <td>Gemini</td>
-                    <td>$ <?php echo cpxGemini()[2]; ?></td>
-                    <td>$ <?php echo cpxGemini()[0]; ?></td>
+                    <td>$ <?php echo cpxGemini()[3]; ?></td>
                     <td>$ <?php echo cpxGemini()[1]; ?></td>
+                    <td>$ <?php echo cpxGemini()[2]; ?></td>
                 </tr>
                 <tr>
                     <td>Cex.IO</td>
-                    <td>$ <?php echo cpxCexIO()[3]; ?></td>
+                    <td>$ <?php echo cpxCexIO()[1]; ?></td>
+                    <td>$ <?php echo cpxCexIO()[8]; ?></td>
                     <td>$ <?php echo cpxCexIO()[7]; ?></td>
-                    <td>$ <?php echo cpxCexIO()[6]; ?></td>
                 </tr>
                 <tr>
                     <td>HitBTC</td>
-                    <td>$ <?php echo cpxHitBTC()[2]; ?></td>
-                    <td>$ <?php echo cpxHitBTC()[0]; ?></td>
                     <td>$ <?php echo cpxHitBTC()[1]; ?></td>
+                    <td>$ <?php echo cpxHitBTC()[5]; ?></td>
+                    <td>$ <?php echo cpxHitBTC()[6]; ?></td>
                 </tr>
                 <tr>
                     <td>Poloniex</td>
-                    <td>$ <?php echo cpxPoloniex()[0]; ?></td>
                     <td>$ <?php echo cpxPoloniex()[1]; ?></td>
                     <td>$ <?php echo cpxPoloniex()[2]; ?></td>
+                    <td>$ <?php echo cpxPoloniex()[3]; ?></td>
                 </tr>
                 <tr>
                     <td>Bitfinex</td>
-                    <td>$ <?php echo cpxBitfinex()[3]; ?></td>
-                    <td>$ <?php echo cpxBitfinex()[5]; ?></td>
-                    <td>$ <?php echo cpxBitfinex()[0]; ?></td>
+                    <td>$ <?php echo cpxBitfinex()[1]; ?></td>
+                    <td>$ <?php echo cpxBitfinex()[6]; ?></td>
+                    <td>$ <?php echo cpxBitfinex()[2]; ?></td>
                 </tr>
             </tbody>
         </table>
+		
     </div>
     
 </div>
