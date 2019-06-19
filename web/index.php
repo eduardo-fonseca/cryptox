@@ -85,6 +85,12 @@
                     <td>$ <?php echo cpxBitfinex()[6]; ?></td>
                     <td>$ <?php echo cpxBitfinex()[2]; ?></td>
                 </tr>
+				<tr>
+                    <td>OKCoin</td>
+                    <td>$ <?php echo cpxOKCoin()[1]; ?></td>
+                    <td>$ <?php echo cpxOKCoin()[3]; ?></td>
+                    <td>$ <?php echo cpxOKCoin()[2]; ?></td>
+                </tr>
             </tbody>
         </table>
 		
